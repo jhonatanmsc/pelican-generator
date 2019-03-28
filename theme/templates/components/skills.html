@@ -41,6 +41,16 @@
         <li class="list-inline-item">
           <i class="icon-jquery" title="JQuery"></i>
         </li>
+        <li class="list-inline-item">
+          <i class="icon-adonis" title="Adonisjs">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58px" height="51.7px" viewBox="0 0 36 33">
+              <g transform="translate(0 .5)" fill="none" fill-rule="evenodd">
+                <path d="M20 2.236L5.618 31h28.764L20 2.236z" stroke="#868e96" stroke-width="2"/>
+                <path fill="#868e96" d="M12 2l12 24H0"/>
+              </g>
+            </svg>
+          </i>
+        </li>
       </ul>
 
       <div class="subheading mb-3">Workflow</div>
@@ -60,3 +70,19 @@
       </ul>
     </div>
   </section>
+{% block js %}
+<script>
+
+  iconAdonis = document.querySelector('g');
+  iconAdonis.addEventListener("mouseover", () => {
+
+    iconAdonis.children[0].setAttribute('stroke', '#ef5350');
+    iconAdonis.children[1].setAttribute('fill', '#ef5350');
+  });
+  iconAdonis.addEventListener("mouseout", () => {
+
+    iconAdonis.children[0].setAttribute('stroke', '#868e96');
+    iconAdonis.children[1].setAttribute('fill', '#868e96');
+  });
+</script>
+{% endblock %}

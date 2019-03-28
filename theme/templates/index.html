@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>{% block title %} {{ title }} {% endblock %}</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="{{ SITEURL }}/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="{{ SITEURL }}/theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="{{ SITEURL }}/theme/css/resume.min.css" rel="stylesheet">
-  {% block css %}{% endblock %}
-
-</head>
-
-<body id="page-top">
-
-  {# sidebar #}
-  {% include 'components/sidebar.html' %}
-
-  <div class="container-fluid p-0">
+{% extends 'layout/main.html' %}
+  
+{% block content %}
 
     {# section resume #}
     {% include 'components/resume.html' %}
@@ -52,20 +24,5 @@
 
     {# section interests #}
     {% include 'components/interests.html' %}
-
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ SITEURL }}/theme/vendor/jquery/jquery.min.js"></script>
-  <script src="{{ SITEURL }}/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="{{ SITEURL }}/theme/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="{{ SITEURL }}/theme/js/resume.min.js"></script>
-  {% block js %} {% endblock %}
-
-</body>
-
-</html>
+    
+{% endblock %}

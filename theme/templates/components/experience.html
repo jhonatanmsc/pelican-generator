@@ -1,0 +1,23 @@
+{# included for main #}
+<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+    <div class="w-100">
+      <h2 class="mb-5">Experiência</h2>
+
+      {% for article in articles_page.object_list %}
+        {% if article.type == 'experiencias' %}
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">{{ article.title }}</h3>
+            <div class="subheading mb-3">{{ article.corp }}</div>
+            <p>{{ article.body }}</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">{{ article.duration }}</span>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+
+  </section>

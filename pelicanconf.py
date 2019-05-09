@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'jhonatanmsc'
-SITENAME = 'jhonatanmsc.github.io'
+SITENAME = 'jhonatanmsc.com'
 SITEURL = ''
 
 PATH = 'content'
@@ -31,6 +31,7 @@ SOCIAL =  {
     'medium': 'https://medium.com/@jhonmscosta',
     'linkedin': 'https://linkedin.com/in/jhonatan-matheus-998182126',
     'facebook': 'https://www.facebook.com/jhonmscosta',
+    'email': 'jhonmscosta@gmail.com'
 }
 
 DEFAULT_PAGINATION = False
